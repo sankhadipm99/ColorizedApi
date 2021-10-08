@@ -1,0 +1,14 @@
+<section class="section1">
+    
+    <div class="colors">
+        <div class="color"*ngFor="let color of colorData; let i=index">
+            <div class="color-img" style="background-color:{{color?.hex_value}}"></div>
+            <div class="color-text">{{color?.hex_value}}</div>
+        </div>
+    </div>
+  </section>
+  <section class="section2"> 
+    
+    <button class="btn" (click)="reloadCurrentPage()">Generate Paletts</button>
+  </section>
+  

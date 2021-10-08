@@ -1,0 +1,76 @@
+
+.section1{
+    text-align: center;
+    margin-top: 30px;
+}
+.section1 h1{
+    margin: 0px 0px 5px 0px;
+    font-family: inter,sans-serif;
+    font-size: 700;
+}
+.section1 .colors{
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-column-gap: 45px;
+    margin-top: 50px;
+}
+
+.section1 .colors .color{
+    background:#fff;
+    box-shadow: 0.4px 0.4px 35px rgba(0,0,0,0.116);
+    padding: 8px 10px 20px 10px;
+    border-radius: 14px;
+}
+
+.section1 .colors .color .color-img{
+    height: 250px;
+    margin-top: 15px;
+}
+
+.section1 .colors .color .color-text{
+    margin-top: 10px;
+    font-family: inter;
+}
+
+.section1 .message{
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    background: #000;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.section2{
+    text-align: center;
+    margin-top: 35px;
+}
+
+.section2 .btn{
+    font-family: inter;
+    font-size: 15px;
+    padding: 18px 150px;
+    background-color: #7e6cca;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+}
+
+.section2 p{
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.section2 h4{
+    font-size: 13px;
+    font-weight: 400;
+    background: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
