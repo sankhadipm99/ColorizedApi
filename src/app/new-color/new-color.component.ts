@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { IColor } from '../interfaces/icolor';
 import { ColorModel } from '../models/color-model';
@@ -12,12 +12,13 @@ import { ColorService } from '../services/color.service';
 export class NewColorComponent implements OnInit {
   colorData: ColorModel[]
   logId = 0
+  values: number | undefined;
   constructor(public colorService: ColorService,
     private router: Router,
     private aRoute: ActivatedRoute) {
     this.colorData = new Array<ColorModel>()
     this.aRoute.data.subscribe(data => {
-      // console.log(data)
+      
       this.colorData = (data[0] as IColor[]).map( cM => new ColorModel(cM.id, cM.uid, cM.hex_value, cM.color_name))
     })
   }
@@ -30,7 +31,7 @@ export class NewColorComponent implements OnInit {
         this.colorData.push(data)
       }
     })
-    // this.fetchNewColor();
+   
   }
 
   fetchNewColor() {
@@ -44,4 +45,8 @@ export class NewColorComponent implements OnInit {
   reloadCurrentPage() {
     window.location.reload();
    }
+   @HostListener('document:keyup', ['$event'])
+   handleKeyboardEvent(event: KeyboardEvent) {
+    this.reloadCurrentPage();
+}
 }
